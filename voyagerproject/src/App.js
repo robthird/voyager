@@ -8,13 +8,15 @@ import { About } from './About';
 import { Contact } from './Contact';
 import { NoMatch } from './NoMatch';
 import { Layout } from './components/Layout';
+import { NavigationBar } from './components/NavigationBar';
 
 
 function App() {
   return (
-    //Creates a Div to wrap components via Fragment
+    //Creates a Div to wrap components via Fragment. Fragment wraps everything explicitly.
     //Added Layout via Function, passed to layout which renders props.children.
     <React.Fragment>
+      <NavigationBar />
       <Layout>
         <Router>
           <Switch>

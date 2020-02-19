@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 //Tricks it into thinking we are operating on a single line
 export const Home = () => (
