@@ -17,18 +17,18 @@ function App() {
     //Creates a Div to wrap components via Fragment. Fragment wraps everything explicitly.
     //Added Layout via Function, passed to layout which renders props.children.
     <React.Fragment>
-      <NavigationBar />
-      <Jumbotron />
-      <Layout>
-        <Router>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/contact" component={Contact} />
-            <Route component={NoMatch} />
-          </Switch>
-        </Router>
-      </Layout>
+      <Router>
+        <NavigationBar />
+        <Jumbotron />
+        <Layout>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />
+              <Route component={NoMatch} />
+            </Switch>
+        </Layout>
+      </Router>
     </React.Fragment>
   );
 }
