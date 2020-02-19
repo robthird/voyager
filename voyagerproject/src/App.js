@@ -7,21 +7,24 @@ import { Home } from './Home';
 import { About } from './About';
 import { Contact } from './Contact';
 import { NoMatch } from './NoMatch';
-
+import { Layout } from './components/Layout';
 
 
 function App() {
   return (
-    //Creates a Div to wrap components
+    //Creates a Div to wrap components via Fragment
+    //Added Layout via Function, passed to layout which renders props.children.
     <React.Fragment>
-      <Router>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/contact" component={Contact} />
-          <Route component={NoMatch} />
-        </Switch>
-      </Router>
+      <Layout>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/contact" component={Contact} />
+            <Route component={NoMatch} />
+          </Switch>
+        </Router>
+      </Layout>
     </React.Fragment>
   );
 }
